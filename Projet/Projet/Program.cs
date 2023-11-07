@@ -14,9 +14,9 @@ namespace MNS
             list.Add(new Meal(PRODUCTYPE.magicGlace, 5f));
             list.Add(new Meal(PRODUCTYPE.magicWrap, 8f));
 
-            Order order = new Order();
+            Order order = new Order(list);
             float total=  order.getTotalePrice();
-            Console.WriteLine("le prix est de " + total);
+            Console.WriteLine("le prix totale des menus est de " + total);
 
 
 

@@ -8,11 +8,11 @@ namespace Projet
 {
     internal class Order
     {
-        public List<Meal> listMeal { get; set; }
+        public List<Meal> listMeal{ get; set; }
 
-        public Order()
+        public Order(List<Meal> list)
         {
-            this.listMeal = new List<Meal>();
+            this.listMeal = list;
         }
 
 
