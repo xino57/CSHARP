@@ -1,0 +1,24 @@
+﻿<Window x:Class="WpfBSD.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfBSD"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="button" Content="Hello World" HorizontalAlignment="Left" Margin="33,63,0,0" VerticalAlignment="Top" Height="58" Width="175" FontSize="30" Click="button_Click">
+            
+        </Button>
+        <Button x:Name="plusButton" Content="+" HorizontalAlignment="Left" Margin="291,92,0,0" VerticalAlignment="Top" Height="67" Width="73" FontSize="30" Click="plusButton_Click"/>
+        <Button x:Name="minusButton" Content="-" HorizontalAlignment="Left" Margin="382,92,0,0" VerticalAlignment="Top" Height="67" Width="73" FontSize="30" Click="minusButton_Click"/>
+        <Label x:Name="counter" Content="0" HorizontalAlignment="Left" Margin="324,199,0,0" VerticalAlignment="Top" Width="100" FontSize="30" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="firstNumberTextBlock" HorizontalAlignment="Left" Margin="565,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" Height="44" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="25"/>
+        <TextBox x:Name="secondNumberTextBlock" HorizontalAlignment="Left" Margin="565,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" Height="44" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="25"/>
+        <Button x:Name="additionButton" Content="+" HorizontalAlignment="Left" Margin="568,172,0,0" VerticalAlignment="Top" Height="67" Width="73" FontSize="30" Click="additionButton_Click" />
+        <Button x:Name="substractionButton" Content="-" HorizontalAlignment="Left" Margin="652,172,0,0" VerticalAlignment="Top" Height="67" Width="73" FontSize="30" Click="substractionButton_Click"/>
+        <Button x:Name="multiplyButton" Content="x" HorizontalAlignment="Left" Margin="567,250,0,0" VerticalAlignment="Top" Height="67" Width="73" FontSize="30" Click="multiplyButton_Click" />
+        <Button x:Name="divideButton" Content="/" HorizontalAlignment="Left" Margin="652,250,0,0" VerticalAlignment="Top" Height="67" Width="73" FontSize="30" Click="divideButton_Click" />
+        <Label x:Name="resultLabel" Content="0" HorizontalAlignment="Left" Margin="596,341,0,0" VerticalAlignment="Top" Width="100" FontSize="30" HorizontalContentAlignment="Center"/>
+    </Grid>
+</Window>
