@@ -7,6 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Label x:Name="TextLastName" Content="LastName" HorizontalAlignment="Left" Margin="7,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="LastNameBox" HorizontalAlignment="Left" Margin="10,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
+        <Label Content="First Name" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="FirstNameBox" HorizontalAlignment="Left" Margin="10,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="TextRaio" Content="Subscription to Mediapart" HorizontalAlignment="Left" Margin="0,112,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="OneMonth" Content="1 Month" HorizontalAlignment="Left" Margin="10,143,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+        <RadioButton x:Name="SixMonth" Content="6 Month" HorizontalAlignment="Left" Margin="11,163,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="Year" Content="1 Year" HorizontalAlignment="Left" Margin="11,183,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="TextCheckBox" Content="Subscription to Mediapart" HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="CheckBoxNewsLetters" Content="NewsLetters" HorizontalAlignment="Left" Margin="11,236,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="BottonSubmit" Content="Submit" Margin="13,278,707,105" FontWeight="Bold" FontSize="18" Background="#FF18CED2" RenderTransformOrigin="-0.225,0.393" Click="BottonSubmit_Click"/>
+        <Button x:Name="BottonDisplayBD" Content="DisplayBD" HorizontalAlignment="Left" Margin="670,288,0,0" VerticalAlignment="Top" Click="Button_Click" Background="#FFE60E0E" FontSize="16" FontWeight="Bold" Height="41"/>
+        <Image x:Name="ImageRandom" HorizontalAlignment="Left" Height="209" Margin="331,17,0,0" VerticalAlignment="Top" Width="259" Source="/Bidule.jpg"/>
+
     </Grid>
 </Window>
