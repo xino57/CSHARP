@@ -29,7 +29,7 @@ namespace Formulaire_WPF
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            
 
         }
 
@@ -40,7 +40,46 @@ namespace Formulaire_WPF
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            string affichage = "";
+            foreach (User user in DB.ListBD)
+            {
+               string lastName = user.LastName;
+               string firstName = user.FirstName;
 
+                string month ="";
+
+                if (user.Month == Month.OneMonth)
+                {
+                    month = "1 mois";
+                }
+                else if (user.Month == Month.SixMonth)
+                {
+                    month = "6 mois";
+                } else if (user.Month == Month.Year)
+                {
+                    month = "1 ans";
+                }
+                else
+                {
+                    MessageBox.Show("Erreur !!!");
+                }
+
+                string newsLetters = "";
+
+                if(user.NewsLetters == true) 
+                {
+                    newsLetters = "oui";
+                }
+                else
+                {
+                    newsLetters = "non";
+                }
+
+                string concatInformationsBD = lastName + " " + firstName + " " + month + " " + newsLetters;
+
+                affichage += concatInformationsBD + "\n";
+            }
+            DisplayBDD.Content = affichage;
         }
 
         private void BottonSubmit_Click(object sender, RoutedEventArgs e)
@@ -79,6 +118,7 @@ namespace Formulaire_WPF
 
                 User user = new User(lastName, firstName, month, newLetters);
                 DB.ListBD.Add(user);
+                MessageBox.Show("Vous avez envoyé le formulaire");
 
             }
 

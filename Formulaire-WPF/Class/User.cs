@@ -24,15 +24,6 @@ namespace Formulaire_WPF
             NewsLetters = newsLetters;
         }
 
-        /*
-         *Récuperer les champs de l'interface
-         *Stocker dans un New USER
-         *Stocker le NEW USER dans l'instance DataBase
-         *
-         *
-         * 
-         */
-
     }
 
 
