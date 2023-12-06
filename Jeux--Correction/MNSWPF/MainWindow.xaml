@@ -1,0 +1,17 @@
+﻿<Window x:Name="window" x:Class="MNSWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MNSWPF"
+        mc:Ignorable="d"
+        Title="TP_MNS" Height="1000
+        " Width="1600">
+    <Grid>
+        <Button x:Name="player1Attack" Content="Taper" HorizontalAlignment="Left" Margin="224,492,0,0" VerticalAlignment="Top" Height="150" Width="308" FontSize="50" Click="player1Attack_Click"/>
+        <TextBlock x:Name="player1HP" HorizontalAlignment="Left" Margin="289,278,0,0" TextWrapping="Wrap" Text="{Binding Player1.HP}" VerticalAlignment="Top" FontSize="50"/>
+        <Button x:Name="player2Attack" Content="Taper" HorizontalAlignment="Left" Margin="1000,492,0,0" VerticalAlignment="Top" Height="150" Width="308" FontSize="50" Click="player2Attack_Click"/>
+        <TextBlock x:Name="player2HP" HorizontalAlignment="Left" Margin="1065,278,0,0" TextWrapping="Wrap" Text="{Binding Player2.HP}" VerticalAlignment="Top" FontSize="50"/>
+
+    </Grid>
+</Window>
