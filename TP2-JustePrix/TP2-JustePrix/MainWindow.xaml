@@ -6,7 +6,13 @@
         xmlns:local="clr-namespace:TP2_JustePrix"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid RenderTransformOrigin="0.587,0.53">
+        <Button x:Name="ButtonPlay" Content="Play" HorizontalAlignment="Left" Margin="318,283,0,0" VerticalAlignment="Top" Click="Button_Click" Background="#FF2E8A14" FontWeight="Bold" Foreground="#FFF7F7F7"/>
+        <TextBox x:Name="textUser" HorizontalAlignment="Left" Margin="425,260,0,0" TextWrapping="Wrap" Text="Entre ton nombre ici !" VerticalAlignment="Top" Width="130" Background="#FF5D58FF" Foreground="White"/>
+        <ListBox x:Name="ListScores" d:ItemsSource="{d:SampleData ItemCount=5}" RenderTransformOrigin="0.499,0.49" Margin="308,129,245,174" Background="#FF131313" Foreground="#FFF5E8E8"/>
+        <TextBox x:Name="UserPseudo" HorizontalAlignment="Left" Margin="308,260,0,0" TextWrapping="Wrap" Text="Ton pseudo ici !" VerticalAlignment="Top" Width="120" Background="#FF151414" Foreground="#FFECD3D3"/>
+        <Button x:Name="ButtonRestart" Content="Restart" HorizontalAlignment="Left" Margin="351,283,0,0" VerticalAlignment="Top" Background="#FFE42424" FontWeight="Bold" Foreground="#FFF7F7F7" Click="ButtonRestart_Click"/>
+        <Button x:Name="ButtonDisplayBestScore" Content="Visualiser le meilleur Score" HorizontalAlignment="Left" Margin="400,283,0,0" VerticalAlignment="Top" Background="#FF1B87A4" FontWeight="Bold" Foreground="#FFF7F7F7" Click="ButtonDisplayBestScore_Click"/>
+
     </Grid>
 </Window>
