@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Data.Odbc;
 using System.Diagnostics.Eventing.Reader;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -38,12 +40,21 @@ namespace TP2_JustePrix
             Score = 1000;
             CurPrice = random.Next(MinPrice, MaxPrice + 1);
             Users = new List<Users>();
+
             MessageBox.Show(CurPrice.ToString());
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Jeux();
+            string jsonString;
+            jsonString = JsonSerializer.Serialize(Users);
+            string jsonFileName = "Myfile.json";
+            string path = AppDomain.CurrentDomain.BaseDirectory + jsonFileName;
+            StreamWriter sw = new StreamWriter(path);
+            sw.WriteLine(jsonString);
+            sw.Close();
         }
 
         private void Jeux()
@@ -126,6 +137,24 @@ namespace TP2_JustePrix
         {
             GetBestScores();
         }
+
+    private void ReadJson()
+        {
+            string jsonstring = "";
+            string jsonFileName = "MyFile.json";
+            string path = AppDomain.CurrentDomain.BaseDirectory + jsonFileName;
+            StreamReader sr = new StreamReader(path);
+            jsonstring = sr.ReadLine();
+            sr.Close();
+
+            try
+            {
+                User user =
+            }
+
+            UpdateScores();
+        }
+
     }
 
 }
