@@ -13,6 +13,7 @@
         <TextBox x:Name="UserPseudo" HorizontalAlignment="Left" Margin="308,260,0,0" TextWrapping="Wrap" Text="Ton pseudo ici !" VerticalAlignment="Top" Width="120" Background="#FF151414" Foreground="#FFECD3D3"/>
         <Button x:Name="ButtonRestart" Content="Restart" HorizontalAlignment="Left" Margin="351,283,0,0" VerticalAlignment="Top" Background="#FFE42424" FontWeight="Bold" Foreground="#FFF7F7F7" Click="ButtonRestart_Click"/>
         <Button x:Name="ButtonDisplayBestScore" Content="Visualiser le meilleur Score" HorizontalAlignment="Left" Margin="400,283,0,0" VerticalAlignment="Top" Background="#FF1B87A4" FontWeight="Bold" Foreground="#FFF7F7F7" Click="ButtonDisplayBestScore_Click"/>
+        <Button x:Name="ButtonRestart_Restart_fichier_JSON" Content="Restart le fichier JSON" HorizontalAlignment="Left" Margin="308,308,0,0" VerticalAlignment="Top" Background="#FFE42424" FontWeight="Bold" Foreground="#FFF7F7F7" Click="ButtonRestart_Fichier_JSON" Width="139"/>
 
     </Grid>
 </Window>
