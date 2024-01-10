@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml;
 
 namespace Pacourir_Fichier_XML
 {
@@ -24,5 +25,30 @@ namespace Pacourir_Fichier_XML
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            XmlDocument xmlNewFichier = new XmlDocument();
+            xmlNewFichier.Load("books.xml");
+
+            XmlNodeList bookNodes = xmlNewFichier.SelectNodes("//book");
+            foreach (XmlNode bookNode in bookNodes)
+            {
+                XmlNode titleNode = bookNode.SelectSingleNode("title");
+                XmlNode yearNode = bookNode.SelectSingleNode("year");
+
+                string title = titleNode?.InnerText;
+                string year = yearNode?.InnerText;
+
+                if (!string.IsNullOrEmpty(title) && !string.IsNullOrEmpty(year))
+                {
+                    ListBox.Items.Add($"Title: {title}, Year: {year}");
+                }
+
+
+            }
+        }
     }
 }
+
