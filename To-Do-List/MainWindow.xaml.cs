@@ -20,12 +20,17 @@ namespace To_Do_List
     /// </summary>
     public partial class MainWindow : Window
     {
-        private Database myDatabase;
+        public Database myDatabase { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
             // Instancie la base de données
-            Database myDatabase = new Database();
+            this.myDatabase = new Database();
+
+            //affecte la liste de tâche à la source de donnée du dataGrid
+            Display_BDD_ToDoList.ItemsSource = myDatabase.Tasks;
+
 
         }
 
@@ -50,9 +55,15 @@ namespace To_Do_List
             myDatabase.Tasks.Add(newTask);
 
             // Afficher les tâches
-            string taskDetails = myDatabase.DisplayTask(myDatabase.Tasks);
-            MessageBox.Show(taskDetails, "Tâches actuelles");
+            RefreshDataGrid();
 
+        }
+
+        private void RefreshDataGrid()
+        {
+            // Met à jour la source de données dans la dataGrid
+            Display_BDD_ToDoList.ItemsSource = null;
+            Display_BDD_ToDoList.ItemsSource = myDatabase.Tasks;
         }
     }
 }
