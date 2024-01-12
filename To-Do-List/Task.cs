@@ -12,15 +12,18 @@ using System.Windows.Media.Animation;
 
 namespace To_Do_List
 {
-    internal class Task
+    public class Task
     {
+
+        public string Title { get; set; }
         public string Description { get; set; }
         public Month month { get; set; }
         public Day day { get; set; }
         public TaskTime taskTime { get; set; }
 
-        public Task(string description, Month month, Day day, TaskTime taskTime)
+        public Task(string title, string description, Month month, Day day, TaskTime taskTime)
         {
+            Title = title;
             Description = description;
             this.month = month;
             this.day = day;
@@ -34,16 +37,22 @@ namespace To_Do_List
            day == otherTask.day &&
            taskTime == otherTask.taskTime;
         }
-        public void udapteTask(string newDescription, Month newMonth, Day NewDay, TaskTime NewTaskTime)
+        public void udapteTask(string newTitle, string newDescription, Month newMonth, Day NewDay, TaskTime NewTaskTime)
         {
+            Title = newTitle;
             Description = newDescription;
             month = newMonth;
             day = NewDay;
             taskTime = NewTaskTime;
         }
 
-        public bool IsValid(string description, Month month, Day day)
+        public bool IsValid(string title, string description, Month month, Day day)
         {
+
+            if (string.IsNullOrEmpty(title))
+            {
+                MessageBox.Show("Entrez un titre s'il vous plaît");
+            }
             if (string.IsNullOrEmpty(description))
             {
                 MessageBox.Show("Entrez votre description s'il vous plaît");
