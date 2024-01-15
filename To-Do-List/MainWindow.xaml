@@ -8,15 +8,19 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <TextBlock x:Name="Title_TODOLIST" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" FontWeight="Bold" FontSize="22" Margin="313,0,0,0"><Run Text="TO-DO"/><Run Language="fr-fr" Text="-"/><Run Text="LIST"/></TextBlock>
-        <TextBlock x:Name="Title_TITLE" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="281" FontWeight="Bold" Margin="0,28,0,0" FontSize="24"><Run Text="Title"/><Run Language="fr-fr" Text=" :"/></TextBlock>
-        <TextBox x:Name="TextBox_Title" HorizontalAlignment="Left" Margin="0,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="790" Background="#FFC3BEBE" Height="45"/>
-        <TextBlock x:Name="Title_DESCRIPTION" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="281" FontWeight="Bold" Margin="0,125,0,0" FontSize="24"><Run Language="fr-fr" Text="Description:"/></TextBlock>
-        <TextBox x:Name="TextBox_Description" HorizontalAlignment="Left" Margin="0,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="790" Background="#FFC3BEBE" Height="45"/>
+        <TextBlock x:Name="Title_TITLE" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="281" FontWeight="Bold" Margin="0,28,0,0" FontSize="20"><Run Text="Title"/><Run Language="fr-fr" Text=" :"/></TextBlock>
+        <TextBox x:Name="TextBox_Title" HorizontalAlignment="Left" Margin="0,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Background="#FFC3BEBE" Height="19"/>
+        <TextBlock x:Name="Title_DESCRIPTION" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="124" FontWeight="Bold" Margin="0,89,0,0" FontSize="20"><Run Language="fr-fr" Text="Description:"/></TextBlock>
+        <TextBox x:Name="TextBox_Description" HorizontalAlignment="Left" Margin="0,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Background="#FFC3BEBE" Height="20"/>
         <Button x:Name="Button_New" Content="New" HorizontalAlignment="Left" Margin="0,224,0,0" VerticalAlignment="Top" Width="175" Height="60" Background="#FF7CE76E" FontSize="36" FontWeight="Bold" Click="Button_New_Click"/>
         <Button x:Name="Button_Edit" Content="Edit" HorizontalAlignment="Left" Margin="194,224,0,0" VerticalAlignment="Top" Width="174" Height="60" Background="#FFDA5F28" FontSize="36" FontWeight="Bold"/>
         <Button x:Name="Button_Delete" Content="Delete" HorizontalAlignment="Left" Margin="395,224,0,0" VerticalAlignment="Top" Width="174" Height="60" Background="#FFF14424" FontSize="36" FontWeight="Bold"/>
         <Button x:Name="Button_Save" Content="Save" HorizontalAlignment="Left" Margin="594,224,0,0" VerticalAlignment="Top" Width="175" Height="60" Background="#FF7CE76E" FontSize="36" FontWeight="Bold"/>
         <DataGrid x:Name="Display_BDD_ToDoList" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,289,10,0" SelectionChanged="Display_BDD_ToDoList_SelectionChanged"/>
+        <TextBlock x:Name="DateTime_Title" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" FontWeight="Bold" Margin="194,28,0,0" FontSize="20"><Run Language="fr-fr" Text="DateTime:"/></TextBlock>
+        <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="194,60,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="ComboBox" HorizontalAlignment="Left" Margin="194,121,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="DateTime_Title_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" FontWeight="Bold" Margin="194,94,0,0" FontSize="20"><Run Language="fr-fr" Text="Month:"/></TextBlock>
 
     </Grid>
 </Window>

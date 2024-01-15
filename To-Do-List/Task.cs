@@ -17,33 +17,20 @@ namespace To_Do_List
 
         public string Title { get; set; }
         public string Description { get; set; }
-        public Month month { get; set; }
-        public Day day { get; set; }
-        public TaskTime taskTime { get; set; }
+        public string DatePicker { get; set; }
+        public string Day { get; set; }
+        public string Month { get; set; }
 
-        public Task(string title, string description, Month month, Day day, TaskTime taskTime)
+        public string taskTime { get; set; }
+
+        public Task(string title, string description, string datePicker, string day, string month, string tasktime)
         {
             Title = title;
             Description = description;
-            this.month = month;
-            this.day = day;
-            this.taskTime = taskTime;
-        }
-
-        public bool IsSameTask(Task otherTask)
-        {
-            return Description == otherTask.Description &&
-           month == otherTask.month &&
-           day == otherTask.day &&
-           taskTime == otherTask.taskTime;
-        }
-        public void udapteTask(string newTitle, string newDescription, Month newMonth, Day NewDay, TaskTime NewTaskTime)
-        {
-            Title = newTitle;
-            Description = newDescription;
-            month = newMonth;
-            day = NewDay;
-            taskTime = NewTaskTime;
+            DatePicker = datePicker;
+            Day = day;
+            Month = month;
+            taskTime= tasktime;
         }
 
         public bool IsValid(string title, string description, Month month, Day day)
@@ -52,6 +39,7 @@ namespace To_Do_List
             if (string.IsNullOrEmpty(title))
             {
                 MessageBox.Show("Entrez un titre s'il vous plaît");
+                return false;
             }
             if (string.IsNullOrEmpty(description))
             {

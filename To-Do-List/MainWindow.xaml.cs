@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,10 +47,11 @@ namespace To_Do_List
             // Permet de récupérer les valeurs dans le champ "title" et "description"
             string title = TextBox_Title.Text;
             string description = TextBox_Description.Text;
+            string DatePicker = datePicker.Text;
 
 
             //Créer une nouvelle task avec les valeurs récupérées
-            Task newTask = new Task(title, description, Month.January, Day.Monday, TaskTime.Morning);
+            Task newTask = new Task(title, description, DatePicker, Month.January, Day.Monday, TaskTime.Morning);
 
             // ajouter la nouvelle tâche à la data base de données 
             myDatabase.Tasks.Add(newTask);
@@ -64,6 +66,15 @@ namespace To_Do_List
             // Met à jour la source de données dans la dataGrid
             Display_BDD_ToDoList.ItemsSource = null;
             Display_BDD_ToDoList.ItemsSource = myDatabase.Tasks;
+        }
+
+        public void AddMonthToCombox()
+        {
+            string [] monthName = CultureInfo.CurrentCulture.DateTimeFormat.MonthNames;
+            foreach (string month in monthName)
+            {
+                ComboBox.Items.Add(month);
+            }
         }
     }
 }
