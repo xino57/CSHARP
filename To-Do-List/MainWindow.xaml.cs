@@ -48,10 +48,11 @@ namespace To_Do_List
             string title = TextBox_Title.Text;
             string description = TextBox_Description.Text;
             string DatePicker = datePicker.Text;
-
+            string month = ComboBox_Month.Text;
+            string day = ComboBox_Day.Text;
 
             //Créer une nouvelle task avec les valeurs récupérées
-            Task newTask = new Task(title, description, DatePicker, Month.January, Day.Monday, TaskTime.Morning);
+            Task newTask = new Task(title, description, DatePicker, day, month, tasktime );
 
             // ajouter la nouvelle tâche à la data base de données 
             myDatabase.Tasks.Add(newTask);
@@ -73,8 +74,19 @@ namespace To_Do_List
             string [] monthName = CultureInfo.CurrentCulture.DateTimeFormat.MonthNames;
             foreach (string month in monthName)
             {
-                ComboBox.Items.Add(month);
+                ComboBox_Month.Items.Add(month);
             }
+        }
+
+        public void AddDayToCombox()
+        {
+            string[] dayName = CultureInfo.CurrentCulture.DateTimeFormat.DayNames;
+            
+            foreach(string day in dayName)
+            {
+                ComboBox_Day.Items.Add(day);
+            }
+
         }
     }
 }

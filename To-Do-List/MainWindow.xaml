@@ -19,8 +19,15 @@
         <DataGrid x:Name="Display_BDD_ToDoList" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,289,10,0" SelectionChanged="Display_BDD_ToDoList_SelectionChanged"/>
         <TextBlock x:Name="DateTime_Title" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" FontWeight="Bold" Margin="194,28,0,0" FontSize="20"><Run Language="fr-fr" Text="DateTime:"/></TextBlock>
         <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="194,60,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="ComboBox" HorizontalAlignment="Left" Margin="194,121,0,0" VerticalAlignment="Top" Width="120"/>
-        <TextBlock x:Name="DateTime_Title_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" FontWeight="Bold" Margin="194,94,0,0" FontSize="20"><Run Language="fr-fr" Text="Month:"/></TextBlock>
+        <ComboBox x:Name="ComboBox_Month" HorizontalAlignment="Left" Margin="194,121,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="Day_Title" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" FontWeight="Bold" Margin="374,33,0,0" FontSize="20"><Run Language="fr-fr" Text="Day:"/></TextBlock>
+        <TextBlock x:Name="Month_Title" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" FontWeight="Bold" Margin="194,94,0,0" FontSize="20"><Run Language="fr-fr" Text="Month:"/></TextBlock>
+        <ComboBox x:Name="ComboBox_Day" HorizontalAlignment="Left" Margin="374,60,0,0" VerticalAlignment="Top" Width="120"/>
+        <RadioButton x:Name="Button_Morning" Content="Morning" HorizontalAlignment="Left" Margin="548,76,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="Button_Noon" Content="Noon" HorizontalAlignment="Left" Margin="548,96,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="Button_Evening" Content="Evening" HorizontalAlignment="Left" Margin="548,116,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Day_Title_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" FontWeight="Bold" Margin="374,33,0,0" FontSize="20"><Run Language="fr-fr" Text="Day:"/></TextBlock>
+        <TextBlock x:Name="taskTime_title" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" FontWeight="Bold" Margin="548,46,0,0" FontSize="20"><Run Language="fr-fr" Text="taskTime:"/></TextBlock>
 
     </Grid>
 </Window>
