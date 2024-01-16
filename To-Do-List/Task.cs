@@ -62,7 +62,7 @@ namespace To_Do_List
 
         // Méthode de formatage des détails d'une tâhe 
 
-        public string FormatTaskDetails()
+       /* public string FormatTaskDetails()
         {
             string formattedDetails = $"Description : {Description}\n";
             formattedDetails += $"Month       : {month}\n";
@@ -70,7 +70,7 @@ namespace To_Do_List
             formattedDetails += $"Task Time   : {taskTime}";
 
             return formattedDetails;
-        }
+        }*/
 
     }
 }

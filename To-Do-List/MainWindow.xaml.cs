@@ -31,8 +31,8 @@ namespace To_Do_List
 
             //affecte la liste de tâche à la source de donnée du dataGrid
             Display_BDD_ToDoList.ItemsSource = myDatabase.Tasks;
-
-
+            AddDayToCombox();
+            AddMonthToCombox();
         }
 
         private void Display_BDD_ToDoList_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -51,6 +51,15 @@ namespace To_Do_List
             string month = ComboBox_Month.Text;
             string day = ComboBox_Day.Text;
 
+            string tasktime = "";
+            if (Button_Morning.IsChecked == true)
+                tasktime = "Morning";
+            else if (Button_Evening.IsChecked == true)
+                tasktime = "Evening";
+            else if (Button_Noon.IsChecked == true)
+                tasktime = "Noon";
+
+
             //Créer une nouvelle task avec les valeurs récupérées
             Task newTask = new Task(title, description, DatePicker, day, month, tasktime );
 
@@ -59,7 +68,6 @@ namespace To_Do_List
 
             // Afficher les tâches
             RefreshDataGrid();
-
         }
 
         private void RefreshDataGrid()
